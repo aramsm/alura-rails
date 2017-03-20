@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <%= form_for Produto.new do |f| %>
+        Nome 
+        <%= f.text_field :nome, class: "form_control" %><br/>
+        Descrição 
+        <%= f.text_area :descricao, class: "form_control" %><br/>
+        Quantidade 
+        <%= f.number_field :quantidade, step: 1, class: "form_control" %><br/>
+        Preço <%= f.number_field :preco, step: 0.01, class: "form_control" %><br/>
+        <%= f.submit "Criar" %>
+    <% end %>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<doctype html>
+<html>
+<head>
+	
+</head>
+<body>
+<% nav_bar brand: "Camisetas", brand_link: root_url %>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Preço</th>
+				<th>Quantidade</th>
+			</tr>
+		</thead>
+		<tbody>
+		    <%= @produtos_por_nome = Produto.all %>
+            <%= @produtos_por_nome.each do |produto| %>
+			    <tr>
+				    <td><%= produto.nome %></td>
+				    <td><%= produto.descricao %></td>
+				    <td><%= produto.preco %></td>
+				    <td><%= produto.quantidade %></td>
+			    </tr>
+			<% end %>
+		</tbody>
+	</table>
+</body>
+</html>
