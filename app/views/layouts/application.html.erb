@@ -10,10 +10,10 @@
 
   <body>
     <%= nav_bar brand: "Home", brand_link: root_url do %>
-        <%= form_tag busca_produto_path, class: "navbar-form navbar-right" do %>
+        <%= form_tag busca_produto_path, class: "navbar-form navbar-right", method: :get  do %>
 	        <div class="form-group">
-		        <%= text_field_tag :nome, nil, class: "form-control" %>
-		        <%= button_to "Buscar", nil, class: "btn btn-default", method: :get %>
+		        <%= text_field_tag :nome, params[:nome], class: "form-control" %>
+		        <%= button_to "Buscar", nil, class: "btn btn-default" %>
 	        </div>
         <% end %>
     <% end %>

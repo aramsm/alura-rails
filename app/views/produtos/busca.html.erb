@@ -9,7 +9,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		    <%= @produtos_por_nome.each do |produto| %>
+		    <%= @produtos.each do |produto| %>
 			    <tr>
 				    <td><%= produto.nome %></td>
 				    <td><%= produto.descricao %></td>
@@ -19,6 +19,5 @@
 			    </tr>
 			<% end %>
 		</tbody>
-		
+		<%= button_to "Adicionar", new_produto_path, method: :get %>
 	</table>
-	<%= button_to "Adicionar", new_produto_path, method: :get, class: "btn btn-primary" %>
